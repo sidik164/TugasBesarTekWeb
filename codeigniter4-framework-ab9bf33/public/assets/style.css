@@ -1,0 +1,293 @@
+/* Responsive enhancements for the e-learning dashboard */
+
+:root {
+    --surface: #ffffff;
+    --surface-muted: #f8fafc;
+    --border-soft: #d7dde5;
+    --text-strong: #1f2937;
+    --text-muted: #64748b;
+    --brand: #0d6efd;
+    --brand-deep: #084298;
+}
+
+body {
+    background: linear-gradient(180deg, #f6f8fc 0%, #eef3f9 100%);
+    color: var(--text-strong);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.navbar {
+    box-shadow: 0 1px 0 rgba(15, 23, 42, 0.08);
+}
+
+.sidebar {
+    min-height: calc(100vh - 56px);
+    border-right: 1px solid var(--border-soft);
+    background: var(--surface);
+}
+
+.sidebar-nav {
+    scrollbar-width: thin;
+}
+
+.sidebar .nav-link {
+    color: var(--text-strong);
+    border-radius: 0.75rem;
+    padding: 0.75rem 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link:focus {
+    background: var(--surface-muted);
+    color: var(--brand-deep);
+    transform: translateX(2px);
+}
+
+.sidebar .nav-link.active {
+    background: var(--brand);
+    color: #fff;
+    box-shadow: 0 0.5rem 1.25rem rgba(13, 110, 253, 0.18);
+}
+
+.main-content {
+    background: transparent;
+}
+
+.card {
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(15, 23, 42, 0.04);
+}
+
+.crud-form .form-label {
+    font-weight: 600;
+    color: var(--text-strong);
+}
+
+.crud-table thead th {
+    background: var(--surface-muted);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+}
+
+.crud-actions .btn {
+    margin-right: 0.35rem;
+}
+
+.crud-actions .btn:last-child {
+    margin-right: 0;
+}
+
+.badge.bg-primary-subtle {
+    background: rgba(13, 110, 253, 0.1) !important;
+}
+
+.login-shell {
+    background:
+        radial-gradient(circle at top left, rgba(13, 110, 253, 0.22), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(29, 78, 216, 0.18), transparent 30%),
+        linear-gradient(180deg, #eef4ff 0%, #f7f9fc 100%);
+}
+
+.login-card {
+    max-width: 1080px;
+    border-radius: 1.5rem;
+}
+
+.login-hero {
+    background: linear-gradient(145deg, #0d6efd 0%, #0b5ed7 48%, #0a4cb3 100%);
+    position: relative;
+}
+
+.login-hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.2), transparent 30%),
+        radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.08), transparent 26%);
+    pointer-events: none;
+}
+
+.login-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.login-badge {
+    background: rgba(255, 255, 255, 0.14);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.login-feature-list {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.login-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.login-feature-item i {
+    font-size: 1.05rem;
+    margin-top: 0.15rem;
+}
+
+.login-submit {
+    box-shadow: 0 0.75rem 1.5rem rgba(13, 110, 253, 0.22);
+}
+
+.login-demo-box {
+    padding: 1rem 1.1rem;
+    border: 1px dashed var(--border-soft);
+    border-radius: 1rem;
+    background: var(--surface-muted);
+}
+
+.table > :not(caption) > * > * {
+    padding: 0.9rem 0.85rem;
+}
+
+.api-code {
+    background: #0f172a;
+    color: #e2e8f0;
+    border-radius: 0.9rem;
+    padding: 1rem;
+    font-size: 0.85rem;
+    overflow-x: auto;
+}
+
+.avatar-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #0d6efd 0%, #1d4ed8 100%);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.progress-thin {
+    height: 0.5rem;
+    background: #e9eef5;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #0d6efd 0%, #4f8df7 100%);
+}
+
+.btn {
+    border-radius: 0.75rem;
+}
+
+@media (max-width: 767.98px) {
+    .sidebar {
+        min-height: auto;
+        border-right: 0;
+        border-bottom: 1px solid var(--border-soft);
+    }
+
+    .sidebar .nav-link {
+        white-space: nowrap;
+    }
+
+    .main-content {
+        padding-top: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .navbar .badge {
+        font-size: 0.7rem;
+    }
+
+    .login-card {
+        border-radius: 1.1rem;
+    }
+
+    .login-hero,
+    .login-card .bg-white {
+        padding: 1.25rem !important;
+    }
+
+    .crud-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+
+    .crud-actions .btn {
+        flex: 1 1 auto;
+    }
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: sticky;
+        top: 56px;
+        align-self: flex-start;
+    }
+}
+
+/* UI/UX Enhancements (Gen Z Aesthetic) */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Hover effects for tables */
+.table-hover tbody tr {
+    transition: all 0.2s ease-in-out;
+}
+.table-hover tbody tr:hover {
+    background-color: var(--surface-muted);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    z-index: 10;
+    position: relative;
+}
+
+/* Empty State Styling */
+.empty-state {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    color: var(--text-muted);
+}
+.empty-state-icon {
+    font-size: 4rem;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
